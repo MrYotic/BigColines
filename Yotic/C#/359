@@ -1,0 +1,1 @@
+public List<Point> GetOneVoidLinerNear(Point coord) => new (int, int)[4] { (2, 0), (0, 2), (-2, 0), (0, -2) }.Select(z => (coord.X + z.Item1, coord.Y + z.Item2)).Where(z => z.Item1 > 0 && z.Item1 < info.Size.Width && z.Item2 > 0 && z.Item2 < info.Size.Height).Where(z => Maze[z.Item1, z.Item2] == Pixel.Wall).Select(z => new Point(z.Item1, z.Item2)).ToList();
