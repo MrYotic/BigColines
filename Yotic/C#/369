@@ -1,0 +1,1 @@
+List<Coord> coords = Directory.GetFiles(fromFilePath + "\\" + "OverWorld" + "\\" + GetTry(coordsMegaRegions[i]) + "\\" + coordsMegaRegions[i].X + " " + coordsMegaRegions[i].Z + "\\" + coordsSubRegions[i].X + " " + coordsSubRegions[i].Z + "\\").Select(x => new Coord(x.Split("\\", StringSplitOptions.None).Last().Split(' ').Select(x => int.Parse(x)).ToList())).ToList();
