@@ -1,0 +1,1 @@
+List<Point> GetLinerNear(Point coord) => new (int, int)[4] { (1, 0), (0, 1), (-1, 0), (0, -1) }.Select(z => (coord.X + z.Item1, coord.Y + z.Item2)).Where(z => z.Item1 > 0 && z.Item1 < size && z.Item2 > 0 && z.Item2 < size).Where(z => maze[z.Item1, z.Item2] == Pixel.Wall).Select(z => new Point(z.Item1, z.Item2)).Where(z => !locPassed.Contains(z) && !passed.Contains(z)).ToList();
