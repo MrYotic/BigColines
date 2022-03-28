@@ -1,0 +1,1 @@
+Send(ConsoleColor.Yellow, $"Save [{x}({ Math.Round((float)(100 - (float)Math.Abs(x) / MaxBlock * 100 + (x > 0 ? 50 : 0)), 5, MidpointRounding.AwayFromZero)}%)] [{(new TimeSpan((DateTime.Now - dateStart).Ticks).ToString("mm'm 'ss's 'fff'n'").Replace("00s ", "").Replace("00m ", "").Replace("000n", ""))}] [{i.count.ToString("#,#", new CultureInfo("de-DE"))}]");
